@@ -17,6 +17,7 @@
   body{margin:0;background:#F6EFE2}
   ::selection{background:#123F33;color:#F6EFE2}
   @keyframes vdKen{0%{transform:scale(1.02)}100%{transform:scale(1.12)}}
+  @keyframes vdKenBg{0%{background-size:104%}100%{background-size:118%}}
   .vd-legacy-track-wrap{flex-shrink:0}
   .vd-legacy-card{background:#151515}
   .vd-legacy-card .vd-legacy-num{color:#F6EFDD}
@@ -27,9 +28,9 @@
   .vd-legacy-card.is-center .vd-legacy-line{background:#282828}
   .vd-legacy-card.is-center .vd-legacy-label{color:#282828}
   @media (max-width:1150px){
-    #top{flex-direction:column}
-    #top > div:first-child{order:2}
-    #top > div:last-child{order:1;min-height:58vh}
+    #top{flex-direction:column;background:none !important}
+    #vd-hero-mobile-media{display:block !important;order:1}
+    #top > div:not(#vd-hero-mobile-media){order:2}
     #bridal{display:block !important;position:static !important;min-height:0 !important;overflow:visible !important;background:#F6EFE2}
     #bridal > img{display:none !important}
     #bridal > div:nth-of-type(1){position:relative !important;inset:auto !important;top:auto !important;height:54vh !important;min-height:340px}
@@ -114,8 +115,11 @@
   </sc-if>
 
   <!-- ===== HERO ===== -->
-  <section id="top" style="display: flex; flex-wrap: wrap; min-height: calc(100vh - 118px); align-items: stretch; background-color: #FFFCF7">
-    <div style="flex:1 1 460px;display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,7vw,96px) clamp(28px,6vw,84px)">
+  <section id="top" style="display: flex; flex-wrap: wrap; min-height: calc(100vh - 118px); align-items: stretch; background: url(&quot;./banner-mrt7aha4-702l.webp&quot;) center / cover no-repeat; overflow: hidden; width: 100%">
+    <div id="vd-hero-mobile-media" style="display:none;width:100%;aspect-ratio:900/900">
+      <img src="banner mob.webp" alt="Mobile hero image" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="flex: 1 1 460px; display: flex; flex-direction: column; justify-content: center; padding: clamp(48px,7vw,96px) clamp(28px,6vw,84px); overflow: hidden; align-self: center">
       <div data-reveal="" style="display:flex;align-items:center;gap:12px;margin-bottom:26px">
         <span style="width: 36px; height: 1px; display: block; background-color: #282828"></span>
         <span style="font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: #282828; font-weight: 500">The Maison of Diamonds</span>
@@ -123,14 +127,11 @@
       <h1 data-reveal="" data-reveal-delay="80" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(42px,6vw,76px);line-height:1.02;letter-spacing:-.01em;color:#221E18">Diamond Jewellery,<br><span style="font-style: italic; color: #000000">Crafted Like Art</span></h1>
       <p data-reveal="" data-reveal-delay="160" style="margin-top:30px;max-width:440px;font-size:clamp(15px,1.2vw,17px);line-height:1.75;color:#6E655A;font-weight:300">Since 1950, Viswa &amp; Devji has shaped diamonds into stories of love, legacy and individuality — one singular piece at a time.</p>
       <div data-reveal="" data-reveal-delay="240" style="display:flex;flex-wrap:wrap;gap:16px;margin-top:42px">
-        <a href="#collections" style="display: inline-flex; align-items: center; gap: 10px; color: #F6EFE2; padding: 17px 32px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: background .4s; background-color: #0B0B0B" style-hover="background:#0C2D24">Explore Collections</a>
-        <a href="#stores" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(166,135,76,.55);color:#2B2620;padding:16px 30px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:all .4s" style-hover="background:#A6874C;color:#fff;border-color:#A6874C">Book a Private Consultation</a>
+        <a href="#collections" style="display: inline-flex; align-items: center; gap: 10px; color: #F6EFE2; padding: 17px 32px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: background .4s; background-color: #0B0B0B" style-hover="background:#0C2D24">Explore Collections</a>
+        <a href="#stores" style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(166,135,76,.55); color: #2B2620; padding: 16px 30px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all .4s" style-hover="background:#A6874C;color:#fff;border-color:#A6874C">Book a Private Consultation</a>
       </div>
     </div>
-    <div style="flex:1 1 420px;position:relative;overflow:hidden;min-height:460px;background:#0C2A22">
-      <img src="./elegant_portrait_in_traditional_saree-mr3d8ceu.png" alt="Peacock diamond earrings" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:vdKen 18s ease-in-out infinite alternate">
-      <div style="position: absolute; left: 32px; bottom: 30px; color: #EFE3C6; font-size: 11px; letter-spacing: .26em; text-transform: uppercase; display: none"></div>
-    </div>
+    
   </section>
 
   <!-- ===== LEGACY ===== -->
@@ -457,7 +458,7 @@
           <div style="display:flex;flex-direction:column;gap:12px">
             <a href="#stores" style="font-size:14px;color:#CFC6B4;text-decoration:none;font-weight:300;transition:color .3s" style-hover="color:#fff">Chennai — T. Nagar</a>
             <a href="#stores" style="font-size:14px;color:#CFC6B4;text-decoration:none;font-weight:300;transition:color .3s" style-hover="color:#fff">Coimbatore — R.S. Puram</a>
-            <a href="/cdn-cgi/l/email-protection#e083819285a096899397818485968a89ce838f8d" style="font-size:14px;color:#CFC6B4;text-decoration:none;font-weight:300;transition:color .3s" style-hover="color:#fff"><span class="__cf_email__" data-cfemail="97f4f6e5f2d7e1fee4e0f6f3f2e1fdfeb9f4f8fa">[email&#160;protected]</span></a>
+            <a href="/cdn-cgi/l/email-protection#157674677055637c6662747170637f7c3b767a78" style="font-size:14px;color:#CFC6B4;text-decoration:none;font-weight:300;transition:color .3s" style-hover="color:#fff"><span class="__cf_email__" data-cfemail="cdaeacbfa88dbba4bebaaca9a8bba7a4e3aea2a0">[email&#160;protected]</span></a>
           </div>
           <a href="#stores" style="display: inline-block; margin-top: 22px; border: 1px solid rgba(201,168,95,.5); color: #F4ECD8; padding: 13px 22px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; transition: all .35s; border-color: #FFFCF780" style-hover="background:#C9A85F;color:#20180C;border-color:#C9A85F">Book an Appointment</a>
         </div>
@@ -510,29 +511,32 @@ class Component extends DCLogic {
       const root = this.rootRef.current;
       if (!root) return;
       const counters = root.querySelectorAll('.vd-counter');
+      const wrapEl = root.querySelector('.vd-legacy-track-wrap');
+      if (!counters.length || !wrapEl) return;
+      const runCounter = (el) => {
+        const target = parseInt(el.getAttribute('data-counter-to'), 10) || 0;
+        const dur = 1400;
+        const start = performance.now();
+        const token = (el._vdToken = (el._vdToken || 0) + 1);
+        const tick = (now) => {
+          if (el._vdToken !== token) return;
+          const p = Math.min(1, (now - start) / dur);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(eased * target).toString();
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
       const cio = new IntersectionObserver((entries) => {
         entries.forEach((e) => {
-          const el = e.target;
           if (e.isIntersecting) {
-            const target = parseInt(el.getAttribute('data-counter-to'), 10) || 0;
-            const dur = 1400;
-            const start = performance.now();
-            const token = (el._vdToken = (el._vdToken || 0) + 1);
-            const tick = (now) => {
-              if (el._vdToken !== token) return;
-              const p = Math.min(1, (now - start) / dur);
-              const eased = 1 - Math.pow(1 - p, 3);
-              el.textContent = Math.round(eased * target).toString();
-              if (p < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
+            counters.forEach(runCounter);
           } else {
-            el._vdToken = (el._vdToken || 0) + 1;
-            el.textContent = '0';
+            counters.forEach((el) => { el._vdToken = (el._vdToken || 0) + 1; el.textContent = '0'; });
           }
         });
       }, { threshold: 0.4 });
-      counters.forEach((el) => cio.observe(el));
+      cio.observe(wrapEl);
     }, 60);
 
     const wrap = this.rootRef.current && this.rootRef.current.querySelector('.vd-legacy-track-wrap');
