@@ -17,7 +17,16 @@
   body{margin:0;background:#F6EFE2}
   ::selection{background:#123F33;color:#F6EFE2}
   @keyframes vdKen{0%{transform:scale(1.02)}100%{transform:scale(1.12)}}
-  @media (max-width:920px){
+  .vd-legacy-track-wrap{flex-shrink:0}
+  .vd-legacy-card{background:#151515}
+  .vd-legacy-card .vd-legacy-num{color:#F6EFDD}
+  .vd-legacy-card .vd-legacy-line{background:#FFFCF7}
+  .vd-legacy-card .vd-legacy-label{color:#FFFCF7}
+  .vd-legacy-card.is-center{background:#FFFFFF}
+  .vd-legacy-card.is-center .vd-legacy-num{color:#000000}
+  .vd-legacy-card.is-center .vd-legacy-line{background:#282828}
+  .vd-legacy-card.is-center .vd-legacy-label{color:#282828}
+  @media (max-width:1150px){
     #top{flex-direction:column}
     #top > div:first-child{order:2}
     #top > div:last-child{order:1;min-height:58vh}
@@ -132,18 +141,37 @@
       <h2 data-reveal="" data-reveal-delay="80" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4.4vw,52px);line-height:1.1;letter-spacing:-.01em;color:#221E18">A Legacy Written in Diamonds</h2>
       <p data-reveal="" data-reveal-delay="150" style="margin:30px auto 0;max-width:600px;font-size:clamp(15px,1.2vw,18px);line-height:1.85;color:#6E655A;font-weight:300">For three generations, Viswa &amp; Devji has drawn, cut and set rare diamonds within its own atelier — an artistry measured not in carats alone, but in the stories each piece is made to hold.</p>
     </div>
-    <div data-reveal="" data-reveal-delay="220" style="max-width:900px;margin:64px auto 0;display:flex;flex-wrap:wrap;justify-content:center;gap:0;border-top:1px solid rgba(166,135,76,.28);border-bottom:1px solid rgba(166,135,76,.28)">
-      <div style="flex:1 1 200px;padding:34px 20px;border-right:1px solid rgba(166,135,76,.18);text-align:center">
-        <div class="vd-counter" data-counter-to="1950" style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#123F33">0</div>
-        <div style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#8B8074;margin-top:8px">Founded</div>
-      </div>
-      <div style="flex:1 1 200px;padding:34px 20px;border-right:1px solid rgba(166,135,76,.18);text-align:center">
-        <div class="vd-counter" data-counter-to="3" style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#123F33">0</div>
-        <div style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#8B8074;margin-top:8px">Generations</div>
-      </div>
-      <div style="flex:1 1 200px;padding:34px 20px;text-align:center">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#123F33">In-House</div>
-        <div style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#8B8074;margin-top:8px">Atelier &amp; Design</div>
+    <div data-reveal="" data-reveal-delay="220" class="vd-legacy-track-wrap" style="max-width:960px;margin:72px auto 0;overflow:hidden;min-height:190px">      <div class="vd-legacy-track" style="display:flex;width:200%">
+        <div class="vd-legacy-card" data-stat="0" style="flex:0 0 calc(100%/6);padding:44px 28px;text-align:center">
+          <div class="vd-counter vd-legacy-num" data-counter-to="1950" style="font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1">0</div>
+          <div class="vd-legacy-line" style="width:26px;height:1px;margin:20px auto"></div>
+          <div class="vd-legacy-label" style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;white-space:nowrap">Founded</div>
+        </div>
+        <div class="vd-legacy-card" data-stat="1" style="flex:0 0 calc(100%/6);padding:44px 28px;text-align:center">
+          <div class="vd-counter vd-legacy-num" data-counter-to="3" style="font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1">0</div>
+          <div class="vd-legacy-line" style="width:26px;height:1px;margin:20px auto"></div>
+          <div class="vd-legacy-label" style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;white-space:nowrap">Generations</div>
+        </div>
+        <div class="vd-legacy-card" data-stat="2" style="flex:0 0 calc(100%/6);padding:44px 28px;text-align:center">
+          <div class="vd-legacy-num" style="font-family:'Cormorant Garamond',serif;font-size:36px;line-height:1">In-House</div>
+          <div class="vd-legacy-line" style="width:26px;height:1px;margin:20px auto"></div>
+          <div class="vd-legacy-label" style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;white-space:nowrap">Atelier &amp; Design</div>
+        </div>
+        <div class="vd-legacy-card" data-stat="0" style="flex:0 0 calc(100%/6);padding:44px 28px;text-align:center">
+          <div class="vd-legacy-num" style="font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1">1950</div>
+          <div class="vd-legacy-line" style="width:26px;height:1px;margin:20px auto"></div>
+          <div class="vd-legacy-label" style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;white-space:nowrap">Founded</div>
+        </div>
+        <div class="vd-legacy-card" data-stat="1" style="flex:0 0 calc(100%/6);padding:44px 28px;text-align:center">
+          <div class="vd-legacy-num" style="font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1">3</div>
+          <div class="vd-legacy-line" style="width:26px;height:1px;margin:20px auto"></div>
+          <div class="vd-legacy-label" style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;white-space:nowrap">Generations</div>
+        </div>
+        <div class="vd-legacy-card" data-stat="2" style="flex:0 0 calc(100%/6);padding:44px 28px;text-align:center">
+          <div class="vd-legacy-num" style="font-family:'Cormorant Garamond',serif;font-size:36px;line-height:1">In-House</div>
+          <div class="vd-legacy-line" style="width:26px;height:1px;margin:20px auto"></div>
+          <div class="vd-legacy-label" style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;white-space:nowrap">Atelier &amp; Design</div>
+        </div>
       </div>
     </div>
   </section>
@@ -429,7 +457,7 @@
           <div style="display:flex;flex-direction:column;gap:12px">
             <a href="#stores" style="font-size:14px;color:#CFC6B4;text-decoration:none;font-weight:300;transition:color .3s" style-hover="color:#fff">Chennai — T. Nagar</a>
             <a href="#stores" style="font-size:14px;color:#CFC6B4;text-decoration:none;font-weight:300;transition:color .3s" style-hover="color:#fff">Coimbatore — R.S. Puram</a>
-            <a href="mailto:care@viswadevji.com" style="font-size:14px;color:#CFC6B4;text-decoration:none;font-weight:300;transition:color .3s" style-hover="color:#fff">care@viswadevji.com</a>
+            <a href="/cdn-cgi/l/email-protection#e083819285a096899397818485968a89ce838f8d" style="font-size:14px;color:#CFC6B4;text-decoration:none;font-weight:300;transition:color .3s" style-hover="color:#fff"><span class="__cf_email__" data-cfemail="97f4f6e5f2d7e1fee4e0f6f3f2e1fdfeb9f4f8fa">[email&#160;protected]</span></a>
           </div>
           <a href="#stores" style="display: inline-block; margin-top: 22px; border: 1px solid rgba(201,168,95,.5); color: #F4ECD8; padding: 13px 22px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; transition: all .35s; border-color: #FFFCF780" style-hover="background:#C9A85F;color:#20180C;border-color:#C9A85F">Book an Appointment</a>
         </div>
@@ -443,13 +471,13 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:3400},&quot;showTopBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;bespokeTone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Emerald&quot;,&quot;Wine&quot;,&quot;Charcoal&quot;],&quot;default&quot;:&quot;Emerald&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;footerTone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Warm Black&quot;,&quot;Emerald&quot;,&quot;Wine&quot;],&quot;default&quot;:&quot;Warm Black&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:3400},&quot;showTopBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;bespokeTone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Emerald&quot;,&quot;Wine&quot;,&quot;Charcoal&quot;],&quot;default&quot;:&quot;Emerald&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;footerTone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Warm Black&quot;,&quot;Emerald&quot;,&quot;Wine&quot;],&quot;default&quot;:&quot;Warm Black&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
 class Component extends DCLogic {
   rootRef = React.createRef();
   state = { isMobile: false, menuOpen: false };
 
   componentDidMount() {
-    const mq = window.matchMedia('(max-width: 920px)');
+    const mq = window.matchMedia('(max-width: 1150px)');
     const apply = () => this.setState({ isMobile: mq.matches });
     apply();
     mq.addEventListener('change', apply);
@@ -484,27 +512,68 @@ class Component extends DCLogic {
       const counters = root.querySelectorAll('.vd-counter');
       const cio = new IntersectionObserver((entries) => {
         entries.forEach((e) => {
-          if (!e.isIntersecting) return;
           const el = e.target;
-          const target = parseInt(el.getAttribute('data-counter-to'), 10) || 0;
-          const dur = 1400;
-          const start = performance.now();
-          const tick = (now) => {
-            const p = Math.min(1, (now - start) / dur);
-            const eased = 1 - Math.pow(1 - p, 3);
-            el.textContent = Math.round(eased * target).toString();
-            if (p < 1) requestAnimationFrame(tick);
-          };
-          requestAnimationFrame(tick);
-          cio.unobserve(el);
+          if (e.isIntersecting) {
+            const target = parseInt(el.getAttribute('data-counter-to'), 10) || 0;
+            const dur = 1400;
+            const start = performance.now();
+            const token = (el._vdToken = (el._vdToken || 0) + 1);
+            const tick = (now) => {
+              if (el._vdToken !== token) return;
+              const p = Math.min(1, (now - start) / dur);
+              const eased = 1 - Math.pow(1 - p, 3);
+              el.textContent = Math.round(eased * target).toString();
+              if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          } else {
+            el._vdToken = (el._vdToken || 0) + 1;
+            el.textContent = '0';
+          }
         });
       }, { threshold: 0.4 });
       counters.forEach((el) => cio.observe(el));
     }, 60);
+
+    const wrap = this.rootRef.current && this.rootRef.current.querySelector('.vd-legacy-track-wrap');
+    if (wrap) {
+      const track = wrap.querySelector('.vd-legacy-track');
+      const cards = wrap.querySelectorAll('.vd-legacy-card');
+      let step = 0;
+      const applyCenter = (centerStat) => {
+        cards.forEach((c) => c.classList.toggle('is-center', Number(c.getAttribute('data-stat')) === centerStat));
+      };
+      applyCenter(1);
+      const advance = () => {
+        step++;
+        track.style.transition = 'transform .8s cubic-bezier(.4,0,.2,1)';
+        track.style.transform = 'translateX(-' + (step * (100 / 6)) + '%)';
+        applyCenter((step + 1) % 3);
+        if (step === 3) {
+          setTimeout(() => {
+            track.style.transition = 'none';
+            track.style.transform = 'translateX(0%)';
+            void track.offsetWidth;
+            step = 0;
+          }, 800);
+        }
+      };
+      this._legacyTimer = setInterval(advance, 2400);
+      const pause = () => clearInterval(this._legacyTimer);
+      const resume = () => { this._legacyTimer = setInterval(advance, 2400); };
+      wrap.addEventListener('mouseenter', pause);
+      wrap.addEventListener('mouseleave', resume);
+      this._legacyCleanup = () => {
+        wrap.removeEventListener('mouseenter', pause);
+        wrap.removeEventListener('mouseleave', resume);
+      };
+    }
   }
 
   componentWillUnmount() {
     if (this._mq && this._apply) this._mq.removeEventListener('change', this._apply);
+    if (this._legacyTimer) clearInterval(this._legacyTimer);
+    if (this._legacyCleanup) this._legacyCleanup();
   }
 
   toggleMenu() { this.setState((s) => ({ menuOpen: !s.menuOpen })); }
