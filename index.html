@@ -31,10 +31,16 @@
     #top{flex-direction:column;background:none !important}
     #vd-hero-mobile-media{display:block !important;order:1}
     #top > div:not(#vd-hero-mobile-media){order:2}
-    #bridal{display:block !important;position:static !important;min-height:0 !important;overflow:visible !important;background:#F6EFE2}
-    #bridal > img{display:none !important}
-    #bridal > div:nth-of-type(1){position:relative !important;inset:auto !important;top:auto !important;height:54vh !important;min-height:340px}
-    #bridal > div:last-child{position:relative !important;max-width:none !important;padding:40px clamp(24px,7vw,40px) 56px}
+    #bridal{display:block !important;position:static !important;aspect-ratio:auto !important;min-height:0 !important;overflow:visible !important;background:#F6EFE2}
+    .vd-bridal-bg-desktop{display:none !important}
+    .vd-bridal-bg-mobile{display:block !important;position:relative !important;height:54vh !important;min-height:340px}
+    #bridal > div:last-child{position:relative !important;max-width:none !important;padding:40px clamp(24px,7vw,40px) 56px;color:#000000 !important}
+    #bridal > div:last-child *{color:#000000 !important}
+    .vd-legacy-card{padding:18px 10px !important}
+    .vd-legacy-num{font-size:24px !important}
+    .vd-legacy-line{margin:10px auto !important}
+    .vd-legacy-label{white-space:normal !important;letter-spacing:.1em !important;font-size:9px !important}
+    .vd-legacy-track-wrap{min-height:130px !important;margin-top:36px !important}
   }
 </style>
 </helmet>
@@ -79,7 +85,7 @@
         <a href="#masterpieces" style="font-size:12.5px;letter-spacing:.12em;color:#2B2620;text-decoration:none;transition:color .3s" style-hover="color:#A6874C">Masterpieces</a>
         <a href="#stores" style="font-size:12.5px;letter-spacing:.12em;color:#2B2620;text-decoration:none;transition:color .3s" style-hover="color:#A6874C">Stores</a>
         <a href="#journal" style="font-size:12.5px;letter-spacing:.12em;color:#2B2620;text-decoration:none;transition:color .3s" style-hover="color:#A6874C">Blog<br></a>
-        <a href="#stores" style="margin-left:8px;border:1px solid #123F33;color:#123F33;padding:11px 20px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:all .35s" style-hover="background:#123F33;color:#F6EFE2">Book an Appointment</a>
+        <a href="#stores" style="margin-left:8px;border:1px solid #123F33;color:#123F33;padding:11px 20px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:all .35s" style-hover="background:#123F33;color:#F6EFE2">Plan a Visit</a>
       </nav>
       </sc-if>
 
@@ -110,7 +116,7 @@
       <a href="#stores" onClick="{{ closeMenu }}" style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#2B2620;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(166,135,76,.2)">Stores</a>
       <a href="#journal" onClick="{{ closeMenu }}" style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#2B2620;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(166,135,76,.2)">Journal</a>
     </nav>
-    <a href="#stores" onClick="{{ closeMenu }}" style="margin-top:auto;background:#123F33;color:#F6EFE2;text-align:center;padding:18px;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none">Book an Appointment</a>
+    <a href="#stores" onClick="{{ closeMenu }}" style="margin-top:auto;background:#123F33;color:#F6EFE2;text-align:center;padding:18px;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none">Plan a Visit</a>
   </div>
   </sc-if>
 
@@ -313,8 +319,8 @@
         <h2 data-reveal="" data-reveal-delay="60" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4.4vw,52px);line-height:1.06;color:#F6EFDD">Rare &amp; Collectible</h2>
         <p data-reveal="" data-reveal-delay="120" style="margin-top:22px;font-size:clamp(15px,1.2vw,17px);line-height:1.8;color:#CFC7B4;font-weight:300">A limited chapter of the maison — rare stones and ambitious design, made in singular editions for those who collect them.</p>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,44px)">
-        <figure data-reveal="" style="flex:1 1 340px;margin:0">
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,44px);max-width:840px;margin:0 auto;justify-content:center">
+        <figure data-reveal="" style="flex:0 1 340px;margin:0">
           <div style="overflow:hidden;aspect-ratio:3/4;background:#0C2A22">
             <img src="./chatgpt-image-jul-2-2026-02_17_20-pm-4--mr3cnwet.png" alt="Adiyogi masterpiece" style="width: 100%; height: 100%; object-fit: fill; display: block; transition: transform 1.4s cubic-bezier(.2,.7,.2,1); background-color: #4E1313" style-hover="transform:scale(1.05)">
           </div>
@@ -323,7 +329,7 @@
             <span style="font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #FFFCF7">One of One</span>
           </figcaption>
         </figure>
-        <figure data-reveal="" data-reveal-delay="120" style="flex:1 1 340px;margin:0">
+        <figure data-reveal="" data-reveal-delay="120" style="flex:0 1 340px;margin:0">
           <div style="overflow:hidden;aspect-ratio:3/4;background:#0C2A22">
             <img src="./chatgpt-image-jul-2-2026-02_17_20-pm-5--mr3cgkg3.png" alt="Ruby &amp; diamond bangles" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.4s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.05)">
           </div>
@@ -340,16 +346,16 @@
   </section>
 
   <!-- ===== BRIDAL ===== -->
-  <section id="bridal" style="position:relative;min-height:min(88vh,720px);display:flex;align-items:flex-end;overflow:hidden">
-    <img src="share-assets/bridal-butterfly.jpg" alt="Bridal diamond jewellery" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-    <div style="position: absolute; inset: 0; background: url(&quot;./bottom bannner.webp&quot;) center / cover no-repeat; top: 0px"></div>
+  <section id="bridal" style="position:relative;aspect-ratio:1920/900;display:flex;align-items:flex-end;overflow:hidden">
+    <div class="vd-bridal-bg-desktop" style="position:absolute;inset:0;background:url(&quot;./bottom bannner-b.webp&quot;) center / cover no-repeat"></div>
+    <img class="vd-bridal-bg-mobile" src="./bottom bannner mob.webp" alt="Bridal diamond jewellery" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:75% center">
     <div data-reveal="" style="position:relative;padding:clamp(44px,7vw,92px) clamp(28px,6vw,80px);max-width:600px;color:#F4E9DE">
-      <div style="font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: #7A4A0A; margin-bottom: 20px">Bridal</div>
-      <h2 style="font-family: 'Cormorant Garamond',serif; font-weight: 500; font-size: clamp(32px,4.6vw,56px); line-height: 1.04; color: #212120">For the Once-in-a-Lifetime</h2>
-      <p style="margin-top: 22px; max-width: 440px; font-size: clamp(15px,1.2vw,17px); line-height: 1.8; color: #0F0F0F; font-weight: 300">Bridal diamonds composed with the weight of tradition and the lightness of modern design — for the day, and for the decades that follow.</p>
+      <div style="font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: #e2e0dd; margin-bottom: 20px">Bridal</div>
+      <h2 style="font-family: 'Cormorant Garamond',serif; font-weight: 500; font-size: clamp(32px,4.6vw,56px); line-height: 1.04; color: #FFFCF7">For the Once-in-a-Lifetime</h2>
+      <p style="margin-top: 22px; max-width: 440px; font-size: clamp(15px,1.2vw,17px); line-height: 1.8; color: #FFFCF7; font-weight: 300">Bridal diamonds composed with the weight of tradition and the lightness of modern design — for the day, and for the decades that follow.</p>
       <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:38px">
         <a href="#" style="background:#F4E9DE;color:#3A121F;padding:16px 30px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;text-decoration:none;transition:background .4s" style-hover="background:#fff">Discover Bridal Jewellery</a>
-        <a href="#stores" style="border: 1px solid #F4E9DE; color: #3A121F; padding: 15px 28px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all .4s" style-hover="background:rgba(244,233,222,.14)">Book a Bridal Consultation</a>
+        <a href="#stores" style="border: 1px solid #F4E9DE; color: #FFFCF7; padding: 15px 28px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: all .4s" style-hover="background:rgba(244,233,222,.14)">Book a Bridal Consultation</a>
       </div>
     </div>
   </section>
@@ -359,25 +365,25 @@
     <div style="max-width:1320px;margin:0 auto">
       <div style="text-align:center;max-width:620px;margin:0 auto 56px">
         <div data-reveal="" style="font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: #282828; margin-bottom: 18px">Visit the Maison</div>
-        <h2 data-reveal="" data-reveal-delay="60" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4.4vw,50px);line-height:1.06;color:#221E18">Two Boutiques, One Legacy</h2>
+        <h2 data-reveal="" data-reveal-delay="60" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4.4vw,50px);line-height:1.06;color:#221E18">Two Showrooms, One Legacy</h2>
         <p data-reveal="" data-reveal-delay="120" style="margin-top:20px;font-size:clamp(15px,1.2vw,17px);line-height:1.8;color:#6E655A;font-weight:300">An unhurried, appointment-led experience — and always welcome for those who simply wish to admire.</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(20px,2.4vw,32px)">
         <div data-reveal="" style="border:1px solid rgba(166,135,76,.32);background:#FFFDF8;padding:clamp(32px,4vw,52px)">
-          <div style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#A6874C">Boutique</div>
+          <div style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#A6874C">Showroom</div>
           <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;color:#221E18;margin-top:10px">Chennai</h3>
           <p style="margin-top:18px;font-size:15px;line-height:1.7;color:#6E655A;font-weight:300">Door No. 12, North Usman Road,<br>T. Nagar, Chennai — 600017</p>
           <div style="margin-top:18px;font-size:13px;letter-spacing:.06em;color:#8B8074">Mon – Sat · 10:30am – 8:00pm</div>
           <div style="margin-top:6px;font-size:13px;letter-spacing:.06em;color:#8B8074">+91 44 0000 0000</div>
-          <a href="#" style="display:inline-block;margin-top:28px;border-bottom:1px solid #A6874C;color:#123F33;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding-bottom:6px;transition:opacity .3s" style-hover="opacity:.6">Book an Appointment →</a>
+          <a href="#" style="display:inline-block;margin-top:28px;border-bottom:1px solid #A6874C;color:#123F33;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding-bottom:6px;transition:opacity .3s" style-hover="opacity:.6">Plan a Visit →</a>
         </div>
         <div data-reveal="" data-reveal-delay="100" style="border:1px solid rgba(166,135,76,.32);background:#FFFDF8;padding:clamp(32px,4vw,52px)">
-          <div style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#A6874C">Boutique</div>
+          <div style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#A6874C">Showroom</div>
           <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;color:#221E18;margin-top:10px">Coimbatore</h3>
           <p style="margin-top:18px;font-size:15px;line-height:1.7;color:#6E655A;font-weight:300">45, D.B. Road, R.S. Puram,<br>Coimbatore — 641002</p>
           <div style="margin-top:18px;font-size:13px;letter-spacing:.06em;color:#8B8074">Mon – Sat · 10:30am – 8:00pm</div>
           <div style="margin-top:6px;font-size:13px;letter-spacing:.06em;color:#8B8074">+91 422 000 0000</div>
-          <a href="#" style="display:inline-block;margin-top:28px;border-bottom:1px solid #A6874C;color:#123F33;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding-bottom:6px;transition:opacity .3s" style-hover="opacity:.6">Visit Our Boutique →</a>
+          <a href="#" style="display:inline-block;margin-top:28px;border-bottom:1px solid #A6874C;color:#123F33;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding-bottom:6px;transition:opacity .3s" style-hover="opacity:.6">Visit Our Showroom →</a>
         </div>
       </div>
     </div>
@@ -417,7 +423,7 @@
   <section style="text-align: center; padding: clamp(64px,8vw,110px) clamp(24px,6vw,56px); border-top: 1px solid rgba(166,135,76,.25); background-color: #FFFCF7">
     <div data-reveal="" style="font-family: 'Cormorant Garamond',serif; font-size: 26px; color: #282828; margin-bottom: 10px">V&amp;D</div>
     <h2 data-reveal="" data-reveal-delay="60" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(28px,4vw,46px);line-height:1.1;color:#221E18;max-width:640px;margin:0 auto">Begin a Private Conversation</h2>
-    <a data-reveal="" data-reveal-delay="140" href="#stores" style="display: inline-block; margin-top: 34px; color: #F6EFE2; padding: 18px 40px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: background .4s; background-color: #000000" style-hover="background:#0C2D24">Book an Appointment</a>
+    <a data-reveal="" data-reveal-delay="140" href="#stores" style="display: inline-block; margin-top: 34px; color: #F6EFE2; padding: 18px 40px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: background .4s; background-color: #000000" style-hover="background:#0C2D24">Plan a visit</a>
   </section>
 
   <!-- ===== FOOTER ===== -->
@@ -460,7 +466,7 @@
             <a href="#stores" style="font-size:14px;color:#CFC6B4;text-decoration:none;font-weight:300;transition:color .3s" style-hover="color:#fff">Coimbatore — R.S. Puram</a>
             <a href="/cdn-cgi/l/email-protection#157674677055637c6662747170637f7c3b767a78" style="font-size:14px;color:#CFC6B4;text-decoration:none;font-weight:300;transition:color .3s" style-hover="color:#fff"><span class="__cf_email__" data-cfemail="cdaeacbfa88dbba4bebaaca9a8bba7a4e3aea2a0">[email&#160;protected]</span></a>
           </div>
-          <a href="#stores" style="display: inline-block; margin-top: 22px; border: 1px solid rgba(201,168,95,.5); color: #F4ECD8; padding: 13px 22px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; transition: all .35s; border-color: #FFFCF780; white-space: nowrap; text-align: center" style-hover="background:#C9A85F;color:#20180C;border-color:#C9A85F">Book an Appointment</a>
+          <a href="#stores" style="display: inline-block; margin-top: 22px; border: 1px solid rgba(201,168,95,.5); color: #F4ECD8; padding: 13px 22px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; transition: all .35s; border-color: #FFFCF780; white-space: nowrap; text-align: center" style-hover="background:#C9A85F;color:#20180C;border-color:#C9A85F">Plan a Visit</a>
         </div>
       </div>
       <div style="margin-top:56px;padding-top:24px;border-top:1px solid rgba(201,168,95,.22);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:11.5px;letter-spacing:.1em;color:#8C8474">
